@@ -1,0 +1,13 @@
+from tenable.sc import TenableSC
+
+# Create a Tenable.sc instance
+sc = TenableSC('172.26.88.203')
+sc.login(access_key='f5b1efbcca244b3abf7a0857ff9c6e03',secret_key='0b6c5a8ac5794f599553c4414bd43ca3')
+
+
+def details(self, id, fields=None):
+    id = 2
+    fields = ['title', 'responsibility'] 
+    fieldsEnumerated = [field for field in fields]
+        
+    return fieldsEnumerated
