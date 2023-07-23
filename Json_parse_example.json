@@ -1,0 +1,20 @@
+{
+    "id":1,
+    "content": "Goodbye Sunshine",
+    "author": {
+        "id": 2,
+        "name":"Sheyong Dami"
+    },
+    "comments": [
+        {
+        "id":3,
+        "content": "Have a great day!",
+        "author": " Damien"
+    },
+    {
+        "id":5,
+        "content":"Lost in Space, yet again",
+        "author":"unknown"
+    }
+        ]
+}
