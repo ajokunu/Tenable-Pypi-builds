@@ -6,7 +6,7 @@ import time
 from datetime import datetime
 import sys
 
-class TenableGoldenImageAgent:
+class ImageAgent:
     def __init__(self):
         self.access_key = "YOUR_ACCESS_KEY" # This is going to be on the Tenable.io account or generated through documentation
         self.secret_key = "YOUR_SECRET_KEY" # same as above
@@ -20,8 +20,8 @@ class TenableGoldenImageAgent:
         """Install Tenable agent using the gui provided curl command"""
         print("Installing Tenable agent onto Golden Image for testing")
         install_command = """
-        curl -H 'X-Key: 6055ebc258af197568f63ebb8e96981b5d1077229b3e7f0b2c03df42ac8cdc12' \
-        'https://sensor.cloud.tenable.com/install/agent?name=agent-name&groups=Golden Image Pipeline' | bash
+        curl -H 'X-Key: keyhere!' \
+        'https://sensor.cloud.tenable.com/install/agent?name=agent-name&groups=groupname' | bash
         """ 
         try:
             subprocess.run(install_command, shell=True, check=True) # testing if our install went through
@@ -116,6 +116,6 @@ class TenableGoldenImageAgent:
         return True
 
 if __name__ == "__main__":
-    scanner = TenableGoldenImageAgent()
+    scanner = ImageAgent()
     if not scanner.run_workflow():
         sys.exit(1)
